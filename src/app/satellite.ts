@@ -1,10 +1,12 @@
+import { style } from "@angular/animations";
 
 export class Satellite {
     name: string;
     type: string;
     launchDate: string;
     orbitType: string;
-    operational: boolean; 
+    operational: boolean;
+
     constructor(name: string, 
     type: string, launchDate: string, 
     orbitType: string, operational: boolean){ 
@@ -15,8 +17,15 @@ export class Satellite {
         this.orbitType=orbitType;
         this.operational=operational;
      }
-    //    shouldShowWarning(){
-    //    let warning = '${this.type ="spaceDebris"}'
-    //    return warning;
-    // }
+    
+       shouldShowWarning(){
+           
+       if (this.type === 'Space Debris'){ 
+           return true
+           
+       }
+
+       }
+    
+    
 }
